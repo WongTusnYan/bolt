@@ -21,8 +21,7 @@ jobs:
          lscpu
          df -h
          pwd
+         ls /github/workspace
          whoami
-         ls /home
-         apt update
-         apt install -y build-essential
-         uname -a
+         ls /github/home
+
