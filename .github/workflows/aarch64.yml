@@ -16,12 +16,12 @@ jobs:
         distribution: ubuntu18.04
         run: | 
          uname -a
+         whoami
          cat /etc/issue
          gcc -v
          lscpu
          df -h
          pwd
          ls /github/workspace
-         whoami
          ls /github/home
 
