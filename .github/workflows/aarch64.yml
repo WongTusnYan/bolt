@@ -14,17 +14,15 @@ jobs:
       with:
         architecture: aarch64
         distribution: ubuntu18.04
-        run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-        uname -a
-        cat /etc/issue
-        gcc -v
-        lscpu
-        df -h
-        pwd
-        whoami
-        ls /home
-        apt update
-        apt install -y build-essential
-        uname -a
+          run: |
+           uname -a
+           cat /etc/issue
+           gcc -v
+            lscpu
+            df -h
+            pwd
+           whoami
+           ls /home
+           apt update
+           apt install -y build-essential
+           uname -a
