@@ -1,0 +1,30 @@
+name: aarch64 CI
+
+on: [push]
+
+jobs:
+  actions_job:
+    runs-on: ubuntu-latest
+    name: A job to test the multi architecture action
+    steps:
+    - name: Run some commands on arm64
+      id: runcmd
+      uses: WongTusnYan/bolt@master
+      with:
+        architecture: aarch64
+        distribution: ubuntu18.04
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+        uname -a
+        cat /etc/issue
+        gcc -v
+        lscpu
+        df -h
+        pwd
+        whoami
+        ls /home
+        apt update
+        apt install -y build-essential
+        uname -a
