@@ -15,6 +15,7 @@ jobs:
         architecture: aarch64
         distribution: ubuntu18.04
         run: | 
+         apt-get update
          uname -a
          whoami
          cat /etc/issue
