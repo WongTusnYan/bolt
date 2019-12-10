@@ -22,7 +22,6 @@ jobs:
          df -h
          pwd
          ls /github/workspace
-         
          apt-get install -y wget
          wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
          tar -zxvf cmake-3.15.1.tar.gz
