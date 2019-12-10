@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test the multi architecture action
     steps:
+    - uses: actions/checkout@v1
     - name: Run some commands on arm64
       id: runcmd
       uses: WongTusnYan/bolt@master
@@ -17,10 +18,10 @@ jobs:
          uname -a
          whoami
          cat /etc/issue
-         ls /github/home
-         gcc -v
          lscpu
          df -h
          pwd
          ls /github/workspace
+         cat /etc/issue
+         ls /github/home
 
