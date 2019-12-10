@@ -20,8 +20,11 @@ jobs:
          cat /etc/issue
          lscpu
          df -h
+         ifconfig
          pwd
          ls /github/workspace
          cat /etc/issue
+         ls /github/home
+         mkdir -p /github/home/zhaowei
          ls /github/home
 
