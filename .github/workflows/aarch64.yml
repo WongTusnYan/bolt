@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test the multi architecture action
     steps:
-    - uses: WongTusnYan/bolt@master
+      uses: WongTusnYan/bolt@master
     - name: Run some commands on arm64
       id: runcmd
       with:
