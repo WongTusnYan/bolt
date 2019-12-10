@@ -18,10 +18,10 @@ jobs:
          uname -a
          whoami
          cat /etc/issue
+         ls /github/home
          gcc -v
          lscpu
          df -h
          pwd
          ls /github/workspace
-         ls /github/home
 
