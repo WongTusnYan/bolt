@@ -20,13 +20,13 @@ jobs:
          cat /etc/issue
          lscpu
          df -h
-         ip ad
          pwd
          ls /github/workspace
-         cat /etc/issue
-         ls /github/home
-         mkdir -p /github/home/zhaowei
-         ls /github/home
-         ls /github
-         df -h /github/workspace
+         wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
+         tar -zxvf cmake-3.15.1.tar.gz
+         cd cmake-3.15.1
+         ./bootstrap
+         make &&  make install
+         cmake --version
+         
 
