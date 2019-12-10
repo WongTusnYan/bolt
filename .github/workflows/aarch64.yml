@@ -31,5 +31,5 @@ jobs:
          make
          make install
          cmake --version
-
+         cat /github/workspace/cmake-3.15.1/Bootstrap.cmk/cmake_bootstrap.log
 
