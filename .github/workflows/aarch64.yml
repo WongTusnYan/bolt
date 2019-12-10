@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test the multi architecture action
     steps:
-    - uses: actions/checkout@v1.0
+    - uses: WongTusnYan/bolt@master
     - name: Run some commands on arm64
       id: runcmd
-      uses: WongTusnYan/bolt@master
       with:
         architecture: aarch64
         distribution: ubuntu18.04
