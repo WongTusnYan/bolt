@@ -32,6 +32,6 @@ jobs:
          make check -j2
          make install -j2
          ldconfig
-         echo 'done'
+         protoc --version
 
          
