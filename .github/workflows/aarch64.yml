@@ -27,6 +27,5 @@ jobs:
          apt-get install -y manpages-dev
          gcc --version
          apt-get install -y autoconf automake libtool curl make g++ unzip git
-         apt-get install -y libprotobuf-dev
-         apt-get install -y libprotoc-dev
+         apt-get install -y libprotobuf-dev protobuf-compiler
          protoc --version
