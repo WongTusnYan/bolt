@@ -22,16 +22,16 @@ jobs:
          lscpu
          df -h
          pwd
-         apt-get install -y autoconf automake libtool curl make g++ unzip git
-         git clone https://github.com/google/protobuf.git
-         cd /github/workspace/protobuf
-         git submodule update --init --recursive
-         ./autogen.sh
+         apt get install -y wget
+         wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz --no-check-certificate
+         tar -xzvf protobuf-all-3.6.1.tar.gz
+         cd /github/workspace/protobuf-3.6.1
          ./configure
          make -j2
-         make check -j2
-         make install -j2
-         ldconfig
+         make check
+         make install-j2
+         ldconfig 
          protoc --version
+         
 
          
