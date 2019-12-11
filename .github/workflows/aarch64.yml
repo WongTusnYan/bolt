@@ -22,16 +22,67 @@ jobs:
          lscpu
          df -h
          pwd
+         ls /github/workspace
+         apt install -y build-essential
+         apt-get install -y manpages-dev
+         gcc --version
          apt-get install -y wget
-         wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz --no-check-certificate
-         tar -xzvf protobuf-all-3.6.1.tar.gz
-         cd /github/workspace/protobuf-3.6.1
+         wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
+         tar -zxvf cmake-3.15.1.tar.gz
+         cd cmake-3.15.1
+         ./bootstrap
+         make -j2
+         make install -j2
+         cmake --version
+         make --version
+         apt-get install -y libpng-dev 
+         apt-get install -y libjpeg-dev
+         DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y
+         apt-get install -y xorg
+         apt-get install -y openbox
+         apt-get install -y xauth
+         apt-get install -y libx11-xcb-dev
+         apt-get install -y zlib1g-dev
+         apt-get install -y autoconf automake libtool curl make g++ unzip git
+         git clone https://github.com/google/protobuf.git
+         cd /github/workspace/protobuf
+         git submodule update --init --recursive
+         ./autogen.sh
          ./configure
          make -j2
-         make check
+         make check 
          make install -j2
-         ldconfig 
-         protoc --version
+         ldconfig	
+         export CImg_ROOT=/github/workspace/CImg
+         export BOLT_ROOT=/github/workspace/
+         cd /github/workspace
+         mkdir build
+         cd build
+         cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
+         make -j2
+         make install
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
 
          
