@@ -35,7 +35,7 @@ jobs:
          make install -j2
          cmake --version
          make --version
-         apt-get install -y libpng-dev 
+         apt-get install -y libpng-dev
          apt-get install -y libjpeg-dev
          DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y
          apt-get install -y xorg
@@ -50,7 +50,7 @@ jobs:
          ./autogen.sh
          ./configure
          make -j2
-         make check 
+         make check
          make install -j2
          ldconfig	
          export CImg_ROOT=/github/workspace/CImg
