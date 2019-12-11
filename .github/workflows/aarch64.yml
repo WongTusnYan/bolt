@@ -22,7 +22,7 @@ jobs:
          lscpu
          df -h
          pwd
-         COPY ./keyboard /etc/default/keyboard
+         DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y
          apt-get install -y xorg
          
          
