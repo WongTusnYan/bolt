@@ -44,15 +44,7 @@ jobs:
          apt-get install -y libx11-xcb-dev
          apt-get install -y zlib1g-dev
          apt-get install -y autoconf automake libtool curl make g++ unzip git
-         git clone https://github.com/google/protobuf.git
-         cd /github/workspace/protobuf
-         git submodule update --init --recursive
-         ./autogen.sh
-         ./configure
-         make -j2
-         make check
-         make install -j2
-         ldconfig
+         apt-get install -y libprotobuf-dev
          export CImg_ROOT=/github/workspace/CImg
          export BOLT_ROOT=/github/workspace/
          cd /github/workspace
