@@ -22,8 +22,7 @@ jobs:
          lscpu
          df -h
          pwd
-         apt-get install -y zlib1g-dev
-         apt-get install -y autoconf automake libtool curl make g++ unzip
+         apt-get install -y autoconf automake libtool curl make g++ unzip git
          git clone https://github.com/google/protobuf.git
          cd /github/workspace/protobuf
          git submodule update --init --recursive
