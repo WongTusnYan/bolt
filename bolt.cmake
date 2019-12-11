@@ -1,4 +1,4 @@
-option(USE_CROSS_COMPILE "set use cross compile or not" OFF)
+option(USE_CROSS_COMPILE "set use cross compile or not" ON)
 option(USE_DEBUG "set use debug information or not" OFF)
 option(USE_DYNAMIC_LIBRARY "set use dynamic library or not" OFF)
 
