@@ -22,7 +22,7 @@ jobs:
          lscpu
          df -h
          pwd
-         apt get install -y wget
+         apt-get install -y wget
          wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz --no-check-certificate
          tar -xzvf protobuf-all-3.6.1.tar.gz
          cd /github/workspace/protobuf-3.6.1
