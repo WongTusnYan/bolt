@@ -8,25 +8,45 @@ jobs:
     name: A job to test the multi architecture action
     steps:
     - uses: actions/checkout@v1
-    - name: Run some commands on arm64
+    - name: Run some commands on arm64 system
       id: runcmd
       uses: WongTusnYan/bolt@master
       with:
         architecture: aarch64
         distribution: ubuntu18.04
         run: | 
+         apt-get update
          uname -a
          whoami
          cat /etc/issue
          lscpu
          df -h
-         ip ad
          pwd
-         ls /github/workspace
-         cat /etc/issue
-         ls /github/home
-         mkdir -p /github/home/zhaowei
-         ls /github/home
-         ls /github
-         df -h /github/workspace
-
+         apt-get install -y libpng-dev
+         apt-get install -y libjpeg-dev
+         apt-get install -y xorg
+         apt-get install -y openbox
+         apt-get install -y xauth
+         apt-get install -y libx11-xcb-dev
+         apt-get install -y zlib1g-dev
+         apt-get install -y autoconf automake libtool curl make g++ unzip
+         cd /github/workspace/protobuf
+         git submodule update --init --recursive
+         ./autogen.sh
+         ./configure
+         make -j2
+         make check -j2
+         make install -j2
+         ldconfig
+         cd /github/workspace/
+         wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz --no-check-certificate
+         tar -xzvf protobuf-all-3.6.1.tar.gz
+         cd /github/workspace/protobuf-3.6.1
+         ./configure
+         make -j2
+         make check
+         make install-j2
+         ldconfig
+         protoc --version
+         
+         
