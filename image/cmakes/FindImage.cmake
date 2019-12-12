@@ -21,7 +21,7 @@ find_package(Xau)
 find_package(z)
 
 if (IMAGE_FOUND)
-    set(IMAGE_LIBRARIES "${IMAGE_LIBRARY};${PNG_LIBRARY};${JPEG_LIBRARY};${X11_LIBRARY};${XCB_LIBRARY};${ZLIB_LIBRARY};${XAU_LIBRARY};-lpthread;-ldl")
+    set(IMAGE_LIBRARIES "${IMAGE_LIBRARY};${PNG_LIBRARY};${JPEG_LIBRARY};${X11_LIBRARY};${XCB_LIBRARY};${ZLIB_LIBRARY};${XAU_LIBRARY};-lpthread;-lXdmcp;-ldl")
     include_directories(include ${IMAGE_INCLUDE_DIR} ${PNG_INCLUDE_DIR} ${JPEG_INCLUDE_DIR}  ${X11_INCLUDE_DIR} ${XCB_INCLUDE_DIR} ${ZLIB_INCLUDE_DIR} ${XAU_INCLUDE_DIR} ${CImg_INCLUDE_DIR})
     message(STATUS "Found image.h: ${IMAGE_INCLUDE_DIR}")
     message(STATUS "Found image: ${IMAGE_LIBRARY}")
