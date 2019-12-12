@@ -23,5 +23,6 @@ jobs:
          df -h
          pwd
          apt-get install -y cmake
-         cmake --versoin
+         which cmake
+         cmake --version
          make --version
