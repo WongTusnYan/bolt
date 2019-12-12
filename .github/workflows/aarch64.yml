@@ -50,6 +50,7 @@ jobs:
          export CImg_ROOT=/github/workspace/CImg
          export BOLT_ROOT=/github/workspace/
          cd /github/workspace
+         pwd
          mkdir build
          cd build
          cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
