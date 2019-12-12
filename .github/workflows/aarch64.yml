@@ -22,23 +22,6 @@ jobs:
          lscpu
          df -h
          pwd
-         ls /github/workspace
-         apt install -y build-essential
-         apt-get install -y manpages-dev
-         gcc --version
-         apt-get install -y wget
-         wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
-         tar -zxvf cmake-3.15.1.tar.gz
-         cd cmake-3.15.1
-         ./bootstrap
-         make -j2
-         make install -j2
-         cmake --version
+         apt-get install -y cmake
+         cmake --versoin
          make --version
-         export BOLT_ROOT=/github/workspace/
-         cd /github/workspace
-         mkdir build
-         cd build
-         cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
-         make -j2
-         make install -j2
