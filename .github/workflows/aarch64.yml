@@ -22,6 +22,36 @@ jobs:
          lscpu
          df -h
          pwd
-         grep  -R -n "convolution_infer_forward_algorithm_bnn" .
-         grep  -R -n "convolution_infer_forward_tmp_bytes_bnn" .
-         grep  -R -n "convolution_bnn" .
+         ls /github/workspace
+         apt install -y build-essential
+         apt-get install -y manpages-dev
+         gcc --version
+         apt-get install -y wget
+         apt-get install -y cmake
+         cmake --version
+         make --version
+         apt-get install -y libpng-dev
+         apt-get install -y libjpeg-dev
+         DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y
+         apt-get install -y xorg
+         apt-get install -y openbox
+         apt-get install -y xauth
+         apt-get install -y libx11-xcb-dev
+         apt-get install -y zlib1g-dev
+         apt-get install -y autoconf automake libtool curl make g++ unzip git
+         apt-get install -y libprotobuf-dev protobuf-compiler
+         protoc --version
+         cd /github/workspace
+         git clone https://github.com/dtschump/CImg.git
+         cd CImg/
+         mkdir include
+         cp CImg.h include/
+         ls include/
+         export CImg_ROOT=/github/workspace/CImg
+         export BOLT_ROOT=/github/workspace/
+         cd /github/workspace
+         mkdir build
+         cd build
+         cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
+         make -j2
+         make install -j2
