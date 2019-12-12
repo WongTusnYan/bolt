@@ -22,7 +22,18 @@ jobs:
          lscpu
          df -h
          pwd
-         apt-get install -y cmake
-         which cmake
+         ls /github/workspace
+         apt install -y build-essential
+         apt-get install -y manpages-dev
+         gcc --version
+         apt-get install -y wget
+         apt-get install cmake
          cmake --version
          make --version
+         export BOLT_ROOT=/github/workspace/
+         cd /github/workspace
+         mkdir build
+         cd build
+         cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
+         make -j2
+         make install -j2
