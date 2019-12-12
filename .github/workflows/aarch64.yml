@@ -22,18 +22,6 @@ jobs:
          lscpu
          df -h
          pwd
-         ls /github/workspace
-         apt install -y build-essential
-         apt-get install -y manpages-dev
-         gcc --version
-         apt-get install -y wget
-         apt-get install cmake
-         cmake --version
-         make --version
-         export BOLT_ROOT=/github/workspace/
-         cd /github/workspace
-         mkdir build
-         cd build
-         cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
-         make -j2
-         make install -j2
+         grep  -R -n "convolution_infer_forward_algorithm_bnn" .
+         grep  -R -n "convolution_infer_forward_tmp_bytes_bnn" .
+         grep  -R -n "convolution_bnn" .
