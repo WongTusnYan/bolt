@@ -46,6 +46,12 @@ jobs:
          apt-get install -y autoconf automake libtool curl make g++ unzip git
          apt-get install -y libprotobuf-dev protobuf-compiler
          protoc --version
+         cd /github/workspace
+         git clone https://github.com/dtschump/CImg.git
+         cd CImg/
+         mkdir include
+         cp CImg.h include/
+         ls include/
          export CImg_ROOT=/github/workspace/CImg
          export BOLT_ROOT=/github/workspace/
          cd /github/workspace
