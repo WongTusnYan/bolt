@@ -59,4 +59,4 @@ jobs:
          cd build
          cmake .. -DCMAKE_INSTALL_PREFIX=${BOLT_ROOT}
          make -j2
-         make install
+         make install -j2
